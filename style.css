@@ -1,102 +1,96 @@
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f8f9fa;
-  color: #333;
+/* Smooth floating widget animation */
+#chat-widget, #idea-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  max-height: 500px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-header {
+#chat-widget.show, #idea-widget.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#chat-widget-header, #idea-widget-header {
   background: #4a90e2;
   color: white;
-  padding: 15px 20px;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
-header h1 {
-  margin: 0;
+#chat-widget-body, #idea-widget-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  overflow-y: auto;
 }
 
-nav {
+#chat-widget-messages {
+  flex: 1;
+  overflow-y: auto;
+}
+
+#chat-widget-input-container {
+  display: flex;
   margin-top: 5px;
 }
 
-nav a {
-  color: white;
-  margin-right: 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-main {
-  padding: 20px;
-}
-
-#chat-container {
-  max-width: 600px;
-  margin: 20px auto;
-  background: white;
-  border-radius: 8px;
-  padding: 15px;
-  border: 1px solid #ddd;
-}
-
-#chat-box {
-  height: 300px;
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
-#chat-input {
-  width: 75%;
+#chat-widget-input {
+  flex: 1;
   padding: 8px;
 }
 
-#chat-send {
-  width: 20%;
-  padding: 8px;
+#chat-widget-send {
   background: #4a90e2;
   color: white;
   border: none;
+  padding: 8px 12px;
   cursor: pointer;
 }
 
-#chat-send:hover {
+#chat-widget-send:hover {
   background: #357ABD;
 }
 
-form label {
+/* Idea Widget Specific */
+#idea-widget form label {
   display: block;
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
-form input, form select {
-  padding: 6px;
+#idea-widget form input, #idea-widget form textarea {
   width: 100%;
+  padding: 8px;
   box-sizing: border-box;
 }
 
-form button {
-  padding: 10px 15px;
+#idea-widget form button {
+  margin-top: 10px;
+  padding: 10px 12px;
   background: #4a90e2;
   color: white;
   border: none;
   cursor: pointer;
-  margin-top: 10px;
 }
 
-form button:hover {
+#idea-widget form button:hover {
   background: #357ABD;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background: #f1f3f5;
-  margin-top: 20px;
 }
