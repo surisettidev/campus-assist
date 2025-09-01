@@ -1,25 +1,47 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f5f6fa;
+  background: #f8f9fa;
+  color: #333;
 }
 
 header {
   background: #4a90e2;
   color: white;
+  padding: 15px 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  margin-top: 5px;
+}
+
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
   padding: 20px;
-  text-align: center;
 }
 
 #chat-container {
-  width: 90%;
   max-width: 600px;
   margin: 20px auto;
-  border: 1px solid #ddd;
   background: white;
-  padding: 10px;
   border-radius: 8px;
+  padding: 15px;
+  border: 1px solid #ddd;
 }
 
 #chat-box {
@@ -48,15 +70,33 @@ header {
   background: #357ABD;
 }
 
-#noticeboard {
-  width: 90%;
-  max-width: 600px;
-  margin: 20px auto;
-  background: white;
-  padding: 10px;
-  border-radius: 8px;
+form label {
+  display: block;
+  margin: 10px 0;
 }
 
-#notices li {
-  margin: 5px 0;
+form input, form select {
+  padding: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button {
+  padding: 10px 15px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background: #357ABD;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #f1f3f5;
+  margin-top: 20px;
 }
