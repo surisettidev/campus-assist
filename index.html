@@ -1,44 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IFHE Campus Assistant</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <title>IF HE Assist — Student Portal</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>IFHE Campus Assistant</h1>
+  <header class="header">
+    <div class="brand">
+      <div class="logo">IF</div>
+      <div>
+        <h1>IF HE Assist</h1>
+        <div style="font-size:13px;color:rgba(255,255,255,0.9)">Campus Assistant</div>
+      </div>
+    </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="chat.html">Chat</a>
+      <a href="feedback.html">Feedback</a>
       <a href="events.html">Events</a>
-      <a href="notices.html">Noticeboard</a>
+      <a href="notices.html">Notices</a>
     </nav>
   </header>
 
-  <main>
+  <main class="container">
     <section class="hero">
-      <h2>Welcome to your Campus Assistant</h2>
-      <p>Ask about events, clubs, schedules, or campus info instantly.</p>
-      <a href="chat.html" class="btn">Ask a Question</a>
+      <div class="left">
+        <h2>Ask questions. Get answers. Stay updated.</h2>
+        <p>Instant AI chatbot for campus info, event RSVPs, notices, and idea sharing. Built by students, for students.</p>
+        <div class="cta">
+          <a class="btn" href="#chat" onclick="document.getElementById('tab-chat')?.click()">Open Chat</a>
+          <a class="btn secondary" href="feedback.html">Send Feedback</a>
+        </div>
+      </div>
+      <div class="right" style="min-width:240px;">
+        <div class="card">
+          <h3>Features</h3>
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li>AI Chat (Gemini / Groq / Qwen fallbacks on backend)</li>
+            <li>Share Ideas (anonymous public view, email stored for admin)</li>
+            <li>Email notifications & reminders (toggleable)</li>
+            <li>Event registrations (forms saved to Sheets)</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section class="features">
-      <h2>Features</h2>
-      <ul>
-        <li>Instant AI Chatbot</li>
-        <li>Email Notifications & Reminders</li>
-        <li>Event Registrations & RSVPs</li>
-        <li>Noticeboard for club & department updates</li>
-      </ul>
-    </section>
+    <div class="features">
+      <div class="card">
+        <h3>Auto Answers</h3>
+        <p>Ask about club activities, schedules, campus queries — instant responses.</p>
+      </div>
+      <div class="card">
+        <h3>Notifications</h3>
+        <p>Enable email reminders and receive event alerts. Toggle on/off from widget.</p>
+      </div>
+      <div class="card">
+        <h3>Noticeboard</h3>
+        <p>Central place for updates from clubs and departments.</p>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>IFHE Campus Assistant &copy; 2025</p>
-  </footer>
-  
+  <footer style="text-align:center;padding:24px;color:var(--muted)">© IF HE Assist 2025</footer>
+
+  <!-- SINGLE include for widget -->
   <script src="saas-widget.js"></script>
 </body>
 </html>
